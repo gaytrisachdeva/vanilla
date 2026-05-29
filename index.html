@@ -1,4 +1,4 @@
-```html id="k9x2pl"
+```html id="full_index_final"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +16,6 @@ body {
     overflow-x: hidden;
 }
 
-/* LOGIN SCREEN */
 .screen {
     min-height: 100vh;
     display: flex;
@@ -66,17 +65,11 @@ button:hover {
     display: none;
 }
 
-/* HINT */
 .hint {
     margin-top: 15px;
     font-size: 1.2rem;
 }
 
-.pink {
-    color: hotpink;
-}
-
-/* MAIN */
 .memory-box {
     border: 1px solid #00ff88;
     padding: 20px;
@@ -98,15 +91,6 @@ button:hover {
     max-width: 700px;
 }
 
-.link-button {
-    color: #00ff88;
-    text-decoration: none;
-}
-
-.link-button:hover {
-    color: hotpink;
-}
-
 .character-card {
     display: block;
     border: 1px solid #00ff88;
@@ -120,6 +104,15 @@ button:hover {
 .character-card:hover {
     box-shadow: 0 0 20px hotpink;
     transform: scale(1.02);
+}
+
+.link-button {
+    color: #00ff88;
+    text-decoration: none;
+}
+
+.link-button:hover {
+    color: hotpink;
 }
 
 </style>
@@ -153,71 +146,96 @@ button:hover {
     <p>access granted.</p>
     <p>recovering timeline...</p>
 
-    <!-- FRAGMENTS -->
-
-    <div class="memory-box" onclick="toggle('f1')">
-        <h2>fragment_01</h2>
-        <p>it all started with the wrong elevator button</p>
+    <!-- FRAGMENT 1 -->
+    <div class="memory-box" onclick="toggleSection('fragment1')">
+        <h2>[ fragment_01.exe ]</h2>
+        <p>it all started with the wrong elevator button.</p>
     </div>
 
-    <div class="hidden-section" id="f1">
-        <p>someone pressed 4 instead of 2</p>
-        <p>and everything changed</p>
-    </div>
-
-
-    <div class="memory-box" onclick="toggle('f2')">
-        <h2>fragment_02</h2>
-        <p>roof access</p>
-    </div>
-
-    <div class="hidden-section" id="f2">
-        <p>stars above us</p>
-        <p>we probably shouldn’t have been there</p>
+    <div class="hidden-section" id="fragment1">
+        <p>someone pressed 4 instead of 2.</p>
+        <p>and somehow that changed everything.</p>
     </div>
 
 
-    <div class="memory-box" onclick="toggle('f3')">
-        <h2>fragment_03</h2>
-        <p>the bench</p>
+    <!-- FRAGMENT 2 -->
+    <div class="memory-box" onclick="toggleSection('fragment2')">
+        <h2>[ fragment_02.exe ]</h2>
+        <p>roof access granted.</p>
     </div>
 
-    <div class="hidden-section" id="f3">
-        <p>that’s where it became real</p>
-    </div>
-
-
-    <div class="memory-box" onclick="toggle('f4')">
-        <h2>frog log</h2>
-        <p>a frog was crying in a well</p>
-    </div>
-
-    <div class="hidden-section" id="f4">
-        <p>a cat found her eventually</p>
-        <p>and refused to leave after that</p>
+    <div class="hidden-section" id="fragment2">
+        <p>sneaky conversations.</p>
+        <p>stars above us.</p>
+        <p>the roof probably knew before we did.</p>
     </div>
 
 
-    <div class="memory-box" onclick="toggle('f5')">
-        <h2>chaos archive</h2>
-        <p>memories stored</p>
+    <!-- FRAGMENT 3 -->
+    <div class="memory-box" onclick="toggleSection('fragment3')">
+        <h2>[ fragment_03.exe ]</h2>
+        <p>the bench.</p>
     </div>
 
-    <div class="hidden-section" id="f5">
-        <p>so many fights</p>
-        <p>so many happy memories</p>
-        <p>so much chaos</p>
+    <div class="hidden-section" id="fragment3">
+        <p>and then there was the bench.</p>
+        <p>the real conversation.</p>
+    </div>
+
+
+    <!-- FRAGMENT 4 -->
+    <div class="memory-box" onclick="toggleSection('fragment4')">
+        <h2>[ fragment_04.exe ]</h2>
+        <p>frog incident report.</p>
+    </div>
+
+    <div class="hidden-section" id="fragment4">
+        <p>there was once a frog crying in a well.</p>
+        <p>a cat found her eventually.</p>
+        <p>and refused to leave after that.</p>
+    </div>
+
+
+    <!-- FRAGMENT 5 -->
+    <div class="memory-box" onclick="toggleSection('fragment5')">
+        <h2>[ fragment_05.zip ]</h2>
+        <p>chaos archives recovered.</p>
+    </div>
+
+    <div class="hidden-section" id="fragment5">
+        <p>so many fights.</p>
+        <p>so many crying nights.</p>
+        <p>so many happy memories.</p>
+        <p>so much stupid nonsense.</p>
+        <p>somehow we survived all of it.</p>
+
+        <img src="comic1.jpg" width="400">
+        <br><br>
+        <img src="memory1.jpg" width="400">
+        <br><br>
+        <img src="memory2.jpg" width="400">
+    </div>
+
+
+    <!-- FINAL FRAGMENT -->
+    <div class="memory-box" onclick="toggleSection('fragment6')">
+        <h2>[ final_fragment.log ]</h2>
+        <p>current status report.</p>
+    </div>
+
+    <div class="hidden-section" id="fragment6">
+        <p>after years of all this...</p>
+        <p>i genuinely cannot imagine a world without you in it anymore.</p>
     </div>
 
 
     <!-- CHARACTERS -->
-
-    <div class="memory-box" onclick="toggle('char')">
+    <div class="memory-box" onclick="toggleSection('characters')">
         <h2>character_database.sys</h2>
         <p>archived entities detected</p>
     </div>
 
-    <div class="hidden-section" id="char">
+    <div class="hidden-section" id="characters">
 
         <a class="character-card" href="mrgreen.html">
             <h2>MR GREEN</h2>
@@ -233,7 +251,6 @@ button:hover {
 
 
     <!-- LINKS -->
-
     <div class="memory-box">
 
         <h2>external links recovered</h2>
@@ -275,7 +292,7 @@ function checkPassword() {
     }
 }
 
-function toggle(id) {
+function toggleSection(id) {
     const el = document.getElementById(id);
     el.style.display = (el.style.display === "block") ? "none" : "block";
 }
