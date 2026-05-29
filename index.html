@@ -1,0 +1,161 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovered Archive</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            color: #00ff88;
+            font-family: monospace;
+            overflow-x: hidden;
+        }
+
+        .screen {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #00ff88;
+        }
+
+        p {
+            max-width: 700px;
+            line-height: 1.8;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: transparent;
+            border: 1px solid #00ff88;
+            color: #00ff88;
+            font-family: monospace;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #00ff88;
+            color: black;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        input {
+            background: black;
+            border: 1px solid #00ff88;
+            color: #00ff88;
+            padding: 10px;
+            margin-top: 20px;
+            font-family: monospace;
+            width: 250px;
+            text-align: center;
+        }
+
+        .memory-box {
+            border: 1px solid #00ff88;
+            padding: 20px;
+            margin-top: 20px;
+            width: 80%;
+            max-width: 700px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LOGIN SCREEN -->
+
+    <div class="screen" id="login-screen">
+        <h1>ARCHIVE ACCESS</h1>
+
+        <p>
+            Recovered memory fragments detected.
+        </p>
+
+        <input type="password" id="password-input" placeholder="Enter access key">
+
+        <button onclick="checkPassword()">ACCESS ARCHIVE</button>
+    </div>
+
+
+    <!-- MAIN WEBSITE -->
+
+    <div class="screen hidden" id="main-site">
+
+        <h1>Recovered Archive</h1>
+
+        <p>
+            Restoration successful.
+        </p>
+
+        <div class="memory-box">
+            <h2>Patch Notes</h2>
+
+            <p>
+                v1.0 — Initial encounter<br>
+                v1.4 — Minecraft chaos update<br>
+                v2.1 — Emotional attachment increased
+            </p>
+        </div>
+
+        <div class="memory-box">
+            <h2>Memory Fragment #01</h2>
+
+            <p>
+                Put your meme, screenshot, comic, or inside joke here.
+            </p>
+        </div>
+
+        <div class="memory-box">
+            <h2>Final Log</h2>
+
+            <p>
+                Thank you for building a world with me :)
+            </p>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function checkPassword() {
+
+            const password = document.getElementById("password-input").value;
+
+            if(password === "minecraft") {
+
+                document.getElementById("login-screen").classList.add("hidden");
+
+                document.getElementById("main-site").classList.remove("hidden");
+
+            } else {
+
+                alert("ACCESS DENIED");
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>
+```
