@@ -1,4 +1,4 @@
-```html
+```html id="v2x7ma"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +7,7 @@
     <title>Recovered Archive</title>
 
     <style>
+
         body {
             margin: 0;
             background-color: black;
@@ -23,6 +24,7 @@
             align-items: center;
             padding: 40px;
             box-sizing: border-box;
+            text-align: center;
         }
 
         h1 {
@@ -34,12 +36,11 @@
         p {
             max-width: 700px;
             line-height: 1.8;
-            text-align: center;
             font-size: 1.1rem;
         }
 
         button {
-            margin-top: 30px;
+            margin-top: 25px;
             padding: 12px 24px;
             background: transparent;
             border: 1px solid #00ff88;
@@ -54,28 +55,41 @@
             color: black;
         }
 
-        .hidden {
-            display: none;
-        }
-
         input {
             background: black;
             border: 1px solid #00ff88;
             color: #00ff88;
-            padding: 10px;
-            margin-top: 20px;
+            padding: 12px;
+            margin-top: 25px;
             font-family: monospace;
-            width: 250px;
+            width: 260px;
             text-align: center;
+            font-size: 1rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .pink {
+            color: hotpink;
+            text-shadow: 0 0 10px hotpink;
+        }
+
+        .hint {
+            margin-top: 20px;
+            font-size: 1.4rem;
+            letter-spacing: 6px;
         }
 
         .memory-box {
             border: 1px solid #00ff88;
-            padding: 20px;
-            margin-top: 20px;
+            padding: 25px;
+            margin-top: 30px;
             width: 80%;
             max-width: 700px;
         }
+
     </style>
 </head>
 
@@ -84,16 +98,29 @@
     <!-- LOGIN SCREEN -->
 
     <div class="screen" id="login-screen">
+
         <h1>ARCHIVE ACCESS</h1>
 
         <p>
-            Recovered memory fragments detected.
+            let's see if you're the real rishabh.
         </p>
+
+        <p>
+            prove you are worthy of access.
+        </p>
+
+        <div class="hint">
+            2 <span class="pink">p i n k</span> d o t s
+        </div>
 
         <input type="password" id="password-input" placeholder="Enter access key">
 
-        <button onclick="checkPassword()">ACCESS ARCHIVE</button>
+        <button onclick="checkPassword()">
+            ACCESS ARCHIVE
+        </button>
+
     </div>
+
 
 
     <!-- MAIN WEBSITE -->
@@ -103,10 +130,11 @@
         <h1>Recovered Archive</h1>
 
         <p>
-            Restoration successful.
+            access granted. unfortunately.
         </p>
 
         <div class="memory-box">
+
             <h2>Patch Notes</h2>
 
             <p>
@@ -114,25 +142,33 @@
                 v1.4 — Minecraft chaos update<br>
                 v2.1 — Emotional attachment increased
             </p>
+
         </div>
 
+
         <div class="memory-box">
-            <h2>Memory Fragment #01</h2>
+
+            <h2>Recovered Memory Fragment</h2>
 
             <p>
-                Put your meme, screenshot, comic, or inside joke here.
+                Put your screenshots, comics, or memories here.
             </p>
+
         </div>
 
+
         <div class="memory-box">
+
             <h2>Final Log</h2>
 
             <p>
-                Thank you for building a world with me :)
+                thank you for building a world with me :)
             </p>
+
         </div>
 
     </div>
+
 
 
     <script>
@@ -141,7 +177,7 @@
 
             const password = document.getElementById("password-input").value;
 
-            if(password === "minecraft") {
+            if(password.toLowerCase() === "2 pink dots") {
 
                 document.getElementById("login-screen").classList.add("hidden");
 
@@ -149,7 +185,7 @@
 
             } else {
 
-                alert("ACCESS DENIED");
+                alert("incorrect. embarrassing honestly.");
 
             }
         }
