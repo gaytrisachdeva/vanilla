@@ -1,4 +1,4 @@
-```html id="full_index_final"
+```html id="final_index_with_spotify"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,6 +115,10 @@ button:hover {
     color: hotpink;
 }
 
+iframe {
+    margin-top: 15px;
+}
+
 </style>
 </head>
 
@@ -146,7 +150,8 @@ button:hover {
     <p>access granted.</p>
     <p>recovering timeline...</p>
 
-    <!-- FRAGMENT 1 -->
+    <!-- FRAGMENTS -->
+
     <div class="memory-box" onclick="toggleSection('fragment1')">
         <h2>[ fragment_01.exe ]</h2>
         <p>it all started with the wrong elevator button.</p>
@@ -158,7 +163,6 @@ button:hover {
     </div>
 
 
-    <!-- FRAGMENT 2 -->
     <div class="memory-box" onclick="toggleSection('fragment2')">
         <h2>[ fragment_02.exe ]</h2>
         <p>roof access granted.</p>
@@ -171,7 +175,6 @@ button:hover {
     </div>
 
 
-    <!-- FRAGMENT 3 -->
     <div class="memory-box" onclick="toggleSection('fragment3')">
         <h2>[ fragment_03.exe ]</h2>
         <p>the bench.</p>
@@ -183,20 +186,17 @@ button:hover {
     </div>
 
 
-    <!-- FRAGMENT 4 -->
     <div class="memory-box" onclick="toggleSection('fragment4')">
-        <h2>[ fragment_04.exe ]</h2>
-        <p>frog incident report.</p>
+        <h2>[ frog incident report ]</h2>
+        <p>there was once a frog crying in a well.</p>
     </div>
 
     <div class="hidden-section" id="fragment4">
-        <p>there was once a frog crying in a well.</p>
         <p>a cat found her eventually.</p>
         <p>and refused to leave after that.</p>
     </div>
 
 
-    <!-- FRAGMENT 5 -->
     <div class="memory-box" onclick="toggleSection('fragment5')">
         <h2>[ fragment_05.zip ]</h2>
         <p>chaos archives recovered.</p>
@@ -255,13 +255,21 @@ button:hover {
 
         <h2>external links recovered</h2>
 
-        <p>
-            <a class="link-button"
-               href="https://open.spotify.com/playlist/4vaNhQ9I1OFd07x94UGKlp?si=d6496b3046af4bc4"
-               target="_blank">
-               grr_playlist.exe
-            </a>
-        </p>
+        <div class="memory-box">
+
+            <h2>grr_playlist.exe</h2>
+
+            <iframe 
+                style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/4vaNhQ9I1OFd07x94UGKlp?utm_source=generator"
+                width="100%" 
+                height="352" 
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+
+        </div>
 
         <p>
             <a class="link-button" href="gallery.html">
