@@ -1,4 +1,4 @@
-```html id="v2x7ma"
+```html id="r7m2dk"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,15 +71,10 @@
             display: none;
         }
 
-        .pink {
-            color: hotpink;
-            text-shadow: 0 0 10px hotpink;
-        }
-
         .hint {
             margin-top: 20px;
-            font-size: 1.4rem;
-            letter-spacing: 6px;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
         }
 
         .memory-box {
@@ -88,6 +83,52 @@
             margin-top: 30px;
             width: 80%;
             max-width: 700px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .memory-box:hover {
+            box-shadow: 0 0 15px #00ff88;
+        }
+
+        .hidden-section {
+            display: none;
+            width: 80%;
+            max-width: 700px;
+            border-left: 1px solid #00ff88;
+            padding-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            animation: fadeIn 0.5s ease;
+            text-align: left;
+        }
+
+        .link-button {
+            color: #00ff88;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .link-button:hover {
+            color: hotpink;
+        }
+
+        img {
+            margin-top: 20px;
+            border: 1px solid #00ff88;
+        }
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
     </style>
@@ -102,16 +143,20 @@
         <h1>ARCHIVE ACCESS</h1>
 
         <p>
-           first, let's see if you're the real rishabh.
+            let's see if you're the real rishabh.
         </p>
 
-       
+        <p>
+            prove you are worthy of access.
+        </p>
 
         <div class="hint">
-           Hint:{number: 1} <span>{colour: 4}</span> {something: 4}
+            {number: 1} {colour: 4} {something: 4}
         </div>
 
-        <input type="password" id="password-input" placeholder="Enter access key">
+        <input type="password"
+               id="password-input"
+               placeholder="Enter access key">
 
         <button onclick="checkPassword()">
             ACCESS ARCHIVE
@@ -125,42 +170,236 @@
 
     <div class="screen hidden" id="main-site">
 
-        <h1>Recovered Archive</h1>
+        <h1>Recovered Timeline</h1>
 
         <p>
-            access granted. 
+            access granted.
         </p>
 
-        <div class="memory-box">
+        <p style="margin-top:10px;">
+            recovering timeline...
+        </p>
 
-            <h2>Patch Notes</h2>
+
+
+        <!-- FRAGMENT 1 -->
+
+        <div class="memory-box" onclick="toggleSection('fragment1')">
+
+            <h2>[ fragment_01.exe ]</h2>
 
             <p>
-                v1.0 — Initial encounter<br>
-                v1.4 — Minecraft chaos update<br>
-                v2.1 — Emotional attachment increased
+                it all started with the wrong elevator button.
+            </p>
+
+        </div>
+
+        <div class="hidden-section" id="fragment1">
+
+            <p>
+                someone pressed 4 instead of 2.
+            </p>
+
+            <p>
+                and somehow that changed everything.
             </p>
 
         </div>
 
 
-        <div class="memory-box">
 
-            <h2>Recovered Memory Fragment</h2>
+        <!-- FRAGMENT 2 -->
+
+        <div class="memory-box" onclick="toggleSection('fragment2')">
+
+            <h2>[ fragment_02.exe ]</h2>
 
             <p>
-                Put your screenshots, comics, or memories here.
+                roof access granted.
+            </p>
+
+        </div>
+
+        <div class="hidden-section" id="fragment2">
+
+            <p>
+                sneaky conversations.
+            </p>
+
+            <p>
+                stars above us.
+            </p>
+
+            <p>
+                the roof probably knew before we did.
             </p>
 
         </div>
 
 
-        <div class="memory-box">
 
-            <h2>Final Log</h2>
+        <!-- FRAGMENT 3 -->
+
+        <div class="memory-box" onclick="toggleSection('fragment3')">
+
+            <h2>[ fragment_03.exe ]</h2>
 
             <p>
-                thank you for building a world with me :)
+                the bench.
+            </p>
+
+        </div>
+
+        <div class="hidden-section" id="fragment3">
+
+            <p>
+                and then there was the bench.
+            </p>
+
+            <p>
+                the real conversation.
+            </p>
+
+        </div>
+
+
+
+        <!-- FRAGMENT 4 -->
+
+        <div class="memory-box" onclick="toggleSection('fragment4')">
+
+            <h2>[ fragment_04.exe ]</h2>
+
+            <p>
+                frog incident report.
+            </p>
+
+        </div>
+
+        <div class="hidden-section" id="fragment4">
+
+            <p>
+                there was once a frog crying in a well.
+            </p>
+
+            <p>
+                a cat found her eventually.
+            </p>
+
+            <p>
+                and refused to leave after that.
+            </p>
+
+        </div>
+
+
+
+        <!-- FRAGMENT 5 -->
+
+        <div class="memory-box" onclick="toggleSection('fragment5')">
+
+            <h2>[ fragment_05.zip ]</h2>
+
+            <p>
+                chaos archives recovered.
+            </p>
+
+        </div>
+
+        <div class="hidden-section" id="fragment5">
+
+            <p>
+                so many fights.
+            </p>
+
+            <p>
+                so many crying nights.
+            </p>
+
+            <p>
+                so many happy memories.
+            </p>
+
+            <p>
+                so much stupid nonsense.
+            </p>
+
+            <p>
+                somehow we survived all of it.
+            </p>
+
+            <img src="comic1.jpg" width="400">
+
+            <br><br>
+
+            <img src="memory1.jpg" width="400">
+
+            <br><br>
+
+            <img src="memory2.jpg" width="400">
+
+        </div>
+
+
+
+        <!-- FINAL FRAGMENT -->
+
+        <div class="memory-box" onclick="toggleSection('fragment6')">
+
+            <h2>[ final_fragment.log ]</h2>
+
+            <p>
+                current status report.
+            </p>
+
+        </div>
+
+        <div class="hidden-section" id="fragment6">
+
+            <p>
+                after years of all this...
+            </p>
+
+            <p>
+                i genuinely cannot imagine a world without you in it anymore.
+            </p>
+
+        </div>
+
+
+
+        <!-- FINAL PORTALS -->
+
+        <div class="memory-box">
+
+            <h2>external links recovered:</h2>
+
+            <p>
+                <a href="YOUR_SPOTIFY_LINK"
+                   target="_blank"
+                   class="link-button">
+
+                   [ grr_playlist.exe ]
+
+                </a>
+            </p>
+
+            <p>
+                <a href="gallery.html"
+                   class="link-button">
+
+                   [ recovered_memories.zip ]
+
+                </a>
+            </p>
+
+            <p>
+                <a href="message.html"
+                   class="link-button">
+
+                   [ final_message.txt ]
+
+                </a>
             </p>
 
         </div>
@@ -173,18 +412,37 @@
 
         function checkPassword() {
 
-            const password = document.getElementById("password-input").value;
+            const password =
+            document.getElementById("password-input").value;
 
             if(password.toLowerCase() === "2 pink dots") {
 
-                document.getElementById("login-screen").classList.add("hidden");
+                document.getElementById("login-screen")
+                .classList.add("hidden");
 
-                document.getElementById("main-site").classList.remove("hidden");
+                document.getElementById("main-site")
+                .classList.remove("hidden");
 
             } else {
 
                 alert("incorrect. embarrassing honestly.");
+            }
+        }
 
+
+
+        function toggleSection(id) {
+
+            const section =
+            document.getElementById(id);
+
+            if(section.style.display === "block") {
+
+                section.style.display = "none";
+
+            } else {
+
+                section.style.display = "block";
             }
         }
 
