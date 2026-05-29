@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RECOVERED MEMORIES</title>
+
+<style>
+body {
+    margin: 0;
+    background: black;
+    color: #00ff88;
+    font-family: monospace;
+    padding: 40px;
+}
+
+h1 {
+    text-shadow: 0 0 10px #00ff88;
+}
+
+.back {
+    color: #00ff88;
+    text-decoration: none;
+}
+
+.back:hover {
+    color: hotpink;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.grid img {
+    width: 100%;
+    border: 1px solid #00ff88;
+    transition: 0.2s;
+}
+
+.grid img:hover {
+    transform: scale(1.05);
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>RECOVERED MEMORY ARCHIVE</h1>
+
+<p>status: partially reconstructed timeline fragments</p>
+
+<div class="grid">
+
+    <img src="images/memory1.jpg.png">
+    <img src="images/memory2.jpg.png">
+    <img src="images/memory3.jpg.png">
+    <img src="images/memory4.jpg.png">
+
+</div>
+
+<br><br>
+
+<a class="back" href="index.html">← return to archive</a>
+
+</body>
+</html>
