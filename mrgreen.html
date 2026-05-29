@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,10 +23,6 @@ h1 {
     margin-top: 20px;
 }
 
-.pink {
-    color: hotpink;
-}
-
 .back {
     color: #00ff88;
     text-decoration: none;
@@ -35,6 +30,26 @@ h1 {
 
 .back:hover {
     color: hotpink;
+}
+
+/* EMBARRASSING MOMENTS */
+.moment {
+    border: 1px dashed #00ff88;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.moment:hover {
+    box-shadow: 0 0 10px #00ff88;
+}
+
+.detail {
+    display: none;
+    margin-top: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #00ff88;
 }
 </style>
 </head>
@@ -79,11 +94,57 @@ questionable ig feed
 </p>
 </div>
 
+<!-- EMBARRASSING MOMENTS -->
+<div class="section">
+<h2>TOP 5 MOST EMBARRASSING MOMENTS</h2>
+
+<div class="moment" onclick="toggle('m5')">
+numero cinco
+</div>
+<div class="detail" id="m5">
+kya apke pass iphone 12 ka cover milega?
+</div>
+
+<div class="moment" onclick="toggle('m4')">
+numero quatro
+</div>
+<div class="detail" id="m4">
+t's a bird, it's a plane, it's a fucking triangle cone in a tree
+</div>
+
+<div class="moment" onclick="toggle('m3')">
+numero tres
+</div>
+<div class="detail" id="m3">
+post knock knock. hm to bs baat kr rahe the
+</div>
+
+<div class="moment" onclick="toggle('m2')">
+numero dos
+</div>
+<div class="detail" id="m2">
+hitting himself 3 times while trying to throw a rolled paper in a dustbin
+</div>
+
+<div class="moment" onclick="toggle('m1')">
+numero uno
+</div>
+<div class="detail" id="m1">
+sir, bio padh rahe hain
+</div>
+
+</div>
 
 <br>
 
 <a class="back" href="index.html">← return to archive</a>
 
+<script>
+function toggle(id) {
+    const el = document.getElementById(id);
+    el.style.display = (el.style.display === "block") ? "none" : "block";
+}
+</script>
+
 </body>
 </html>
-```
